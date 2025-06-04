@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Builder;
 
 return [
     'up' => function (Builder $schema) {
-        $schema->table('flusers', function(Blueprint $table){
+        $schema->table('users', function(Blueprint $table){
             $table->index('money');
         });
     },
