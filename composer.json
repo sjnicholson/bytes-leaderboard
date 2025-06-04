@@ -1,5 +1,5 @@
 {
-    "name": "sjnicholson/flarum-bytes-leaderboard",
+    "name": "sjnicholson/bytes-leaderboard",
     "description": "A Flarum extension. Add bytes leaderboard to the forum.",
     "type": "flarum-extension",
     "license": "MIT",
