@@ -1,10 +1,10 @@
-ziven-bytes-leaderboard:
+sjnicholson-money-leaderboard:
   forum:
-    leaderboard-name: Bytes Leaderboard
-    leaderboard-list-title: Bytes Leaderboard
+    leaderboard-name: Money Leaderboard
+    leaderboard-list-title: Money Leaderboard
     leaderboard-list-rank: Rank
     leaderboard-list-user: User
-    leaderboard-list-bytes: Bytes Owned
+    leaderboard-list-money: Money Owned
     leaderboard-load-more: Load More
     leaderboard-list-empty: There is no content
   admin:
@@ -15,7 +15,7 @@ ziven-bytes-leaderboard:
       leaderboard-icon-help: Enter the name of any FontAwesome icon class, including the <code>fas fa-</code> prefix.
       leaderboard-entry-position: Leaderboard entry position
       leaderboard-entry-sideNav: Side navigation menu
-      leaderboard-hide-bytes-text: Hide bytes name after username
+      leaderboard-hide-money-text: Hide money name after username
       leaderboard-additional-info: Additional information
       leaderboard-additional-info-help: Displays additional information at the beginning of the ranking. Keep empty to hide paragraph.
       leaderboard-slug: Slug

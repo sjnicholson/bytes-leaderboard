@@ -11,10 +11,10 @@ export default class BytesLeaderboardIndexPage extends Page {
     super.oninit(vnode);
     this.loading = true;
     this.moreResults = false;
-    this.bytesLeaderboardList = [];
+    this.BytesLeaderboardList = [];
     this.totalLoadCount = 0;
 
-    this.additionalInfo = app.forum.attribute("bytesLeaderBoardAdditionalInfo");
+    this.additionalInfo = app.forum.attribute("BytesLeaderboardAdditionalInfo");
     this.maxLoadCount = app.forum.attribute("leaderboardMaxLoadCount") || 50;
     this.initloadCount = app.forum.attribute("leaderboardInitLoadCount") || 20;
     this.loadMoreCount = app.forum.attribute("leaderboardLoadMoreCount") || 10;
@@ -23,7 +23,7 @@ export default class BytesLeaderboardIndexPage extends Page {
 
   oncreate(vnode) {
     super.oncreate(vnode);
-    const titleText = app.translator.trans("ziven-bytes-leaderboard.forum.leaderboard-list-title");
+    const titleText = app.translator.trans("sjnicholson-money-leaderboard.forum.leaderboard-list-title");
     app.setTitle(titleText);
     app.setTitleCount(0);
     $(".item-nav button .Button-label").text(titleText);
@@ -49,7 +49,7 @@ export default class BytesLeaderboardIndexPage extends Page {
 
             <div class="BytesLeaderboardContainer">
               <div class="BytesLeaderboardListTitle">
-                {app.translator.trans("ziven-bytes-leaderboard.forum.leaderboard-list-title")}
+                {app.translator.trans("sjnicholson-money-leaderboard.forum.leaderboard-list-title")}
               </div>
 
               {this.additionalInfo && this.additionalInfo.length>0 && (
@@ -57,13 +57,13 @@ export default class BytesLeaderboardIndexPage extends Page {
               )}
 
               <div class="BytesLeaderboardListHeader">
-                <div class="BytesLeaderboardListHeaderRank">{app.translator.trans("ziven-bytes-leaderboard.forum.leaderboard-list-rank")}</div>
-                <div class="BytesLeaderboardListHeaderUser">{app.translator.trans("ziven-bytes-leaderboard.forum.leaderboard-list-user")}</div>
-                <div class="BytesLeaderboardListHeaderBytes">{app.translator.trans("ziven-bytes-leaderboard.forum.leaderboard-list-bytes")}</div>
+                <div class="BytesLeaderboardListHeaderRank">{app.translator.trans("sjnicholson-money-leaderboard.forum.leaderboard-list-rank")}</div>
+                <div class="BytesLeaderboardListHeaderUser">{app.translator.trans("sjnicholson-money-leaderboard.forum.leaderboard-list-user")}</div>
+                <div class="BytesLeaderboardListHeaderMoney">{app.translator.trans("sjnicholson-money-leaderboard.forum.leaderboard-list-money")}</div>
               </div>
 
               <ul class="BytesLeaderboardList">
-                {this.bytesLeaderboardList.map((leaderboardListItem) => {
+                {this.BytesLeaderboardList.map((leaderboardListItem) => {
                   rankID++;
 
                   return (
@@ -74,16 +74,16 @@ export default class BytesLeaderboardIndexPage extends Page {
                 })}
               </ul>
 
-              {!this.loading && this.bytesLeaderboardList.length===0 && (
+              {!this.loading && this.BytesLeaderboardList.length===0 && (
                 <div>
-                  <div style="font-size:1.4em;color: var(--muted-more-color);text-align: center;height: 300px;line-height: 100px;">{app.translator.trans("ziven-bytes-leaderboard.forum.leaderboard-list-empty")}</div>
+                  <div style="font-size:1.4em;color: var(--muted-more-color);text-align: center;height: 300px;line-height: 100px;">{app.translator.trans("sjnicholson-money-leaderboard.forum.leaderboard-list-empty")}</div>
                 </div>
               )}
 
               {!loading && this.hasMoreResults() && (
                 <div style="text-align:center;padding:20px">
                   <Button className={'Button Button--primary'} disabled={this.loading} loading={this.loading} onclick={() => this.loadMore()}>
-                    {app.translator.trans('ziven-bytes-leaderboard.forum.leaderboard-load-more')}
+                    {app.translator.trans('sjnicholson-money-leaderboard.forum.leaderboard-load-more')}
                   </Button>
                 </div>
               )}
@@ -102,12 +102,12 @@ export default class BytesLeaderboardIndexPage extends Page {
 
   loadMore() {
     this.loading = true;
-    this.loadResults(this.bytesLeaderboardList.length,this.loadMoreCount);
+    this.loadResults(this.BytesLeaderboardList.length,this.loadMoreCount);
   }
 
   parseResults(results) {
     this.moreResults = !!results.payload.links && !!results.payload.links.next;
-    [].push.apply(this.bytesLeaderboardList, results);
+    [].push.apply(this.BytesLeaderboardList, results);
     this.loading = false;
     m.redraw();
 
@@ -129,7 +129,7 @@ export default class BytesLeaderboardIndexPage extends Page {
     this.totalLoadCount+=loadCount;
 
     return app.store
-      .find("bytesLeaderboard", {
+      .find("BytesLeaderboard", {
         page: {
           offset,
           limit

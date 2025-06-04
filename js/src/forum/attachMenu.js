@@ -10,11 +10,11 @@ export default function () {
     const allowViewLeaderboard = app.forum.attribute('allowViewLeaderbaord');
 
     if(allowViewLeaderboard){
-      let bytesLeaderBoardEntryPosition = app.forum.attribute("bytesLeaderBoardEntryPosition");
+      let BytesLeaderboardEntryPosition = app.forum.attribute("BytesLeaderboardEntryPosition");
 
-      if(bytesLeaderBoardEntryPosition==0){
+      if(BytesLeaderboardEntryPosition==0){
         addSidebarMenu();
-      }else if(bytesLeaderBoardEntryPosition==1){
+      }else if(BytesLeaderboardEntryPosition==1){
         addTopRightMenu();
       }
     }

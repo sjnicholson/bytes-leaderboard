@@ -1,6 +1,6 @@
 <?php
 
-namespace Ziven\BytesLeaderboard\Controllers;
+namespace sjnicholson\BytesLeaderboard\Controllers;
 
 use Flarum\Frontend\Document;
 use Psr\Http\Message\ServerRequestInterface;

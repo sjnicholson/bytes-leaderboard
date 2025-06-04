@@ -5,7 +5,7 @@ import Button from 'flarum/common/components/Button';
 
 export default function () {
   extend(HeaderSecondary.prototype, 'items', function (items) {
-    const bytesLeaderBoardIcon = app.forum.attribute("bytesLeaderBoardIcon");
+    const BytesLeaderboardIcon = app.forum.attribute("BytesLeaderboardIcon");
 
     items.add(
       'BytesLeaderboard',
@@ -13,11 +13,11 @@ export default function () {
         className="Button Button--flat"
         style="width:36px"
         onclick={() => {
-          window.location.href = app.route('bytesLeaderboard');
+          window.location.href = app.route('BytesLeaderboard');
         }}
-        icon={bytesLeaderBoardIcon}
+        icon={BytesLeaderboardIcon}
       >
-        {app.translator.trans('ziven-bytes-leaderboard.forum.leaderboard-name')}
+        {app.translator.trans('sjnicholson-money-leaderboard.forum.leaderboard-name')}
       </Button>,
       15
     );

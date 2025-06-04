@@ -6,7 +6,7 @@ use Illuminate\Database\Schema\Builder;
 return [
     'up' => function (Builder $schema) {
         $schema->table('users', function(Blueprint $table){
-            $table->index('bytes');
+            $table->index('money');
         });
     },
     'down' => function (Builder $schema) {
