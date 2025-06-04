@@ -5,7 +5,6 @@
     "license": "MIT",
     "require": {
         "flarum/core": "^1.0",
-        "antoinefr/flarum-ext-bytes": "*"
     },
     "support": {
         "issues": "https://github.com/sjnicholson/bytes-leaderboard/issues",
