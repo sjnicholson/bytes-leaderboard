@@ -1,6 +1,6 @@
 <?php
 
-namespace Ziven\BytesLeaderboard\Controllers;
+namespace sjnicholson\BytesLeaderboard\Controllers;
 
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\User\User;
@@ -22,25 +22,25 @@ class ListBytesLeaderboardController extends AbstractListController{
         $limit = $this->extractLimit($request);
         $offset = $this->extractOffset($request);
         $actor = $request->getAttribute('actor');
-        $allowViewLeaderBoard = $request->getAttribute('actor')->can('bytesLeaderboard.allowViewLeaderbaord');
+        $allowViewLeaderBoard = $request->getAttribute('actor')->can('BytesLeaderboard.allowViewLeaderbaord');
 
         if($allowViewLeaderBoard){
-            $bytesLeaderboardResult = User::skip($offset)->take($limit + 1)->orderBy('bytes', 'desc')->get();
-            $hasMoreResults = $limit > 0 && $bytesLeaderboardResult->count() > $limit;
+            $BytesLeaderboardResult = User::skip($offset)->take($limit + 1)->orderBy('money', 'desc')->get();
+            $hasMoreResults = $limit > 0 && $BytesLeaderboardResult->count() > $limit;
 
             if($hasMoreResults){
-                $bytesLeaderboardResult->pop();
+                $BytesLeaderboardResult->pop();
             }
 
             $document->addPaginationLinks(
-                $this->url->to('api')->route('bytesLeaderboard.get'),
+                $this->url->to('api')->route('BytesLeaderboard.get'),
                 $params,
                 $offset,
                 $limit,
                 $hasMoreResults?null:0
             );
 
-            return $bytesLeaderboardResult;
+            return $BytesLeaderboardResult;
         }
     }
 }

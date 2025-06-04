@@ -6,9 +6,9 @@ import username from "flarum/helpers/username";
 export default class BytesLeaderboardListItem extends Component {
   view() {
     const {leaderboardListItem,rankID} = this.attrs;
-    const bytesName = app.forum.attribute('antoinefr-bytes.bytesname') || '[bytes]';
-    const bytesValue = leaderboardListItem.attribute("bytes");
-    const bytesText = app.forum.attribute('bytesLeaderBoardHideBytesText') === "1"?bytesValue:bytesName.replace('[bytes]', bytesValue);
+    const moneyName = app.forum.attribute('antoinefr-money.moneyname') || '[money]';
+    const moneyValue = leaderboardListItem.attribute("money");
+    const moneyText = app.forum.attribute('BytesLeaderboardHideMoneyText') === "1"?moneyValue:moneyName.replace('[money]', moneyValue);
     let trophyClass = "BytesLeaderboardListItemTrophyNone";
     let rankClass = "BytesLeaderboardListItemRankTop";
 
@@ -42,8 +42,8 @@ export default class BytesLeaderboardListItem extends Component {
             {avatarWithFrame?avatarWithFrame(leaderboardListItem):avatar(leaderboardListItem)}{usernameWithColor?usernameWithColor(leaderboardListItem):username(leaderboardListItem)}
           </Link>
         </div>
-        <div class="BytesLeaderboardListHeaderBytes">
-          {bytesText}
+        <div class="BytesLeaderboardListHeaderMoney">
+          {moneyText}
         </div>
       </div>
     );
