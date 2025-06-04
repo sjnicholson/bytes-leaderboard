@@ -1,0 +1,102 @@
+
+.Header-secondary .Header-controls > .item-BytesLeaderboard {
+    @media (min-width: @screen-tablet) {
+        .Button-label {
+            display: none;
+        }
+
+        .Button-icon {
+            margin-right: 0;
+        }
+    }
+}
+
+.BytesLeaderboardContainer{
+  width: 100%;
+  padding-top: 30px;
+}
+
+.BytesLeaderboardListTitle{
+  padding-bottom:10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.BytesLeaderboardListItemContainer{
+  display: flex;
+}
+
+.BytesLeaderboardListHeader{
+  display: flex;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top:10px
+}
+
+.BytesLeaderboardListHeaderRank{
+  width:20%;
+  position: relative;
+}
+
+.BytesLeaderboardListHeaderUser{
+  width:40%;
+}
+
+.BytesLeaderboardListHeaderBytes{
+  width:40%;
+}
+
+.BytesLeaderboardList{
+  margin: 0;
+  padding: 0px 0px 20px 0px;
+  list-style-type: none;
+  position: relative;
+}
+
+.BytesLeaderboardListItems{
+  padding-top:15px
+}
+
+.BytesLeaderboardListItemRankTop{
+  font-weight: bold;
+  position: absolute;
+  left: 11px;
+  color: white;
+  z-index: 1;
+}
+
+.BytesLeaderboardListItemRankLower{
+  position: absolute;
+  left: 11px;
+  top: 2px;
+  z-index: 1;
+}
+
+.transferHistoryUser span.username {
+  padding-left: 5px;
+}
+
+.BytesLeaderboardListItemTrophyNone {
+  display:none;
+}
+
+.BytesLeaderboardListItemTrophyGold {
+  position: absolute;
+  top: -5px;
+  font-size: 26px;
+  color: gold;
+}
+
+.BytesLeaderboardListItemTrophySilver {
+  position: absolute;
+  top: -5px;
+  font-size: 26px;
+  color: silver;
+}
+
+.BytesLeaderboardListItemTrophyBronze {
+  position: absolute;
+  top: -5px;
+  font-size: 26px;
+  color: #cd7f32;
+}

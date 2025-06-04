@@ -1,0 +1,36 @@
+{
+    "name": "sjnicholson/flarum-bytes-leaderboard",
+    "description": "A Flarum extension. Add bytes leaderboard to the forum.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0",
+        "antoinefr/flarum-ext-bytes": "*"
+    },
+    "support": {
+        "issues": "https://github.com/sjnicholson/bytes-leaderboard/issues",
+        "source": "https://github.com/sjnicholson/bytes-leaderboard"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "sjnicholson\\BytesLeaderboard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sjnicholson"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "sjnicholson Leaderboard",
+            "icon": {
+                "name": "fas fa-sort-amount-up",
+                "backgroundColor": "#238c59",
+                "color": "#fff"
+            }
+        }
+    }
+}
